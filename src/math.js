@@ -1,3 +1,10 @@
+import {
+  ARITHMETIC_PROGRESSION_START_VALUE_MIN,
+  ARITHMETIC_PROGRESSION_START_VALUE_MAX,
+  ARITHMETIC_PROGRESSION_STEP_MAX,
+  ARITHMETIC_PROGRESSION_STEP_MIN,
+} from './const.js';
+
 const operationsMap = new Map([
   ['*', (n1, n2) => n1 * n2],
   ['+', (n1, n2) => n1 + n2],
@@ -6,6 +13,10 @@ const operationsMap = new Map([
 
 export default function getRandomInt(max) {
   return Math.floor(Math.random() * max);
+}
+
+export function getRandomIntFromRange(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 export function getRandomOperator() {
@@ -24,4 +35,17 @@ export function getGreatestCommonDivisor(n1, n2) {
   }
 
   return getGreatestCommonDivisor(n2, n1 % n2);
+}
+
+export function getRandomProgression(length) {
+  const startValue = getRandomIntFromRange(
+    ARITHMETIC_PROGRESSION_START_VALUE_MIN,
+    ARITHMETIC_PROGRESSION_START_VALUE_MAX,
+  );
+  const step = getRandomIntFromRange(
+    ARITHMETIC_PROGRESSION_STEP_MIN,
+    ARITHMETIC_PROGRESSION_STEP_MAX,
+  );
+
+  return Array(length).fill(null).map((item, i) => startValue + step * (i + 1));
 }
