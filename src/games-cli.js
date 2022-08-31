@@ -46,5 +46,6 @@ export const showCorrectMessage = () => {
 };
 
 export const showErrorMessage = (userName, userAnswer, correctAnswer) => {
-  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}`);
+  console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
+  console.log(`Let's try again, ${userName}`);
 };
