@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
-import play from '../src/cli-even.js';
+import { GAME_TYPE_EVEN } from '../src/const.js';
+import play from '../src/main.js';
 
-play();
+play(GAME_TYPE_EVEN);
