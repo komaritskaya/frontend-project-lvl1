@@ -1,4 +1,5 @@
-import { MAX_RANDOM_VALUE } from '../const.js';
+import { GAME_TYPE_EVEN, MAX_RANDOM_VALUE } from '../const.js';
+import play from '../main.js';
 import { getRandomInt } from '../math.js';
 
 const getEvenQuestionString = (value) => value.toString();
@@ -10,4 +11,4 @@ const playEven = () => {
   return [getEvenQuestionString(value), correctAnswer];
 };
 
-export default playEven;
+export default () => play(GAME_TYPE_EVEN, playEven);

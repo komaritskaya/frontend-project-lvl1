@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-import { GAME_TYPE_CALC } from '../src/const.js';
-import play from '../src/main.js';
+import play from '../src/games/calc.js';
 
-play(GAME_TYPE_CALC);
+play();

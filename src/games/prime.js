@@ -1,4 +1,5 @@
-import { MAX_RANDOM_VALUE } from '../const.js';
+import { GAME_TYPE_PRIME, MAX_RANDOM_VALUE } from '../const.js';
+import play from '../main.js';
 import { getRandomInt, checkPrime } from '../math.js';
 
 const getPrimeQuestionString = (value) => value.toString();
@@ -10,4 +11,4 @@ const playPrime = () => {
   return [getPrimeQuestionString(value), correctAnswer];
 };
 
-export default playPrime;
+export default () => play(GAME_TYPE_PRIME, playPrime);

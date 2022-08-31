@@ -1,4 +1,5 @@
-import { MAX_RANDOM_VALUE } from '../const.js';
+import { GAME_TYPE_CALC, MAX_RANDOM_VALUE } from '../const.js';
+import play from '../main.js';
 import { getRandomInt, applyOperator, getRandomOperator } from '../math.js';
 
 const getCalcQuestionString = (value1, value2, operator) => `${value1} ${operator} ${value2}`;
@@ -12,4 +13,4 @@ const playCalc = () => {
   return [getCalcQuestionString(value1, value2, operator), correctAnswer];
 };
 
-export default playCalc;
+export default () => play(GAME_TYPE_CALC, playCalc);

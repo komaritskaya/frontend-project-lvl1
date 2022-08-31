@@ -1,4 +1,5 @@
-import { MAX_RANDOM_VALUE } from '../const.js';
+import { GAME_TYPE_GCD, MAX_RANDOM_VALUE } from '../const.js';
+import play from '../main.js';
 import { getRandomInt, getGreatestCommonDivisor } from '../math.js';
 
 const getGCDQuestionString = (value1, value2) => `${value1} ${value2}`;
@@ -11,4 +12,4 @@ const playGCD = () => {
   return [getGCDQuestionString(value1, value2), correctAnswer];
 };
 
-export default playGCD;
+export default () => play(GAME_TYPE_GCD, playGCD);

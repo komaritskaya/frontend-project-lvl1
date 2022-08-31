@@ -1,4 +1,5 @@
-import { ARRAY_SIZE } from '../const.js';
+import { ARRAY_SIZE, GAME_TYPE_PROGRESSION } from '../const.js';
+import play from '../main.js';
 import { getRandomIntFromRange, getRandomProgression } from '../math.js';
 
 const getProgressionQuestionString = (arr, questionIndex) => arr
@@ -13,4 +14,4 @@ const playProgression = () => {
   return [getProgressionQuestionString(progression, randomIndex), correctAnswer];
 };
 
-export default playProgression;
+export default () => play(GAME_TYPE_PROGRESSION, playProgression);
